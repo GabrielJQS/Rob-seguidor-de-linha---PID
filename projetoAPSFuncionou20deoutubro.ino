@@ -22,12 +22,11 @@ const int velocidadeMotorB = 255;   // Velocidade reduzida para Motor B
 double Setpoint, Input, Output;  // Setpoint (valor alvo), Input (entrada do erro), Output (saída PID)
 
 // Ajuste dos parâmetros do PID (proporcional, integral, derivativo)Os 
-double Kp = 1.0, Ki = 0, Kd = 0;  // Esses valores podem ser ajustados conforme necessário
+double Kp = 1.0, Ki = 0, Kd = 0;  // Esses valores devem ser ajustados conforme necessário
 
 // Criando o objeto PID
 PID myPID(&Input, &Output, &Setpoint, Kp, Ki, Kd, DIRECT);
 
-// Função de configuração
 void setup() {
   // Configura os pinos como saída para os motores
   pinMode(motorA_horario, OUTPUT);
